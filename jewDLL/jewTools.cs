@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Security.Cryptography;
 using System.Management;
@@ -32,6 +33,21 @@ namespace jewDLL
             return result;
         }
         // End Contains Function
+
+        // Start (Name) Function
+        public static int[] SplitToDigits(int num)
+        {
+            List<int> listOfInts = new List<int>();
+
+            while (num > 0)
+            {
+                listOfInts.Add(num % 10);
+                num /= 10;
+            }
+            listOfInts.Reverse();
+            return listOfInts.ToArray();
+        }
+        // End (Name) Function
 
         // Start GetHWID Function
         public static string GetHWID()
