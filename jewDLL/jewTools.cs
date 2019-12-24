@@ -34,7 +34,7 @@ namespace jewDLL
         }
         // End Contains Function
 
-        // Start (Name) Function
+        // Start SplitToDigits Function
         public static int[] SplitToDigits(int num)
         {
             List<int> listOfInts = new List<int>();
@@ -47,7 +47,16 @@ namespace jewDLL
             listOfInts.Reverse();
             return listOfInts.ToArray();
         }
-        // End (Name) Function
+        // End SplitToDigits Function
+
+        // Start Swap function
+        public static void Swap<T>(ref T x, ref T y)
+        {
+            T t = y;
+            y = x;
+            x = t;
+        }
+        // End Swap function
 
         // Start GetHWID Function
         public static string GetHWID()
